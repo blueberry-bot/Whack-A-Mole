@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack-a-Mole Lite</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 30px;
+      background-image: url('../EVENTDP_GAME/background-Picsart-AiImageEnhancer.jfif');
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: darkslategrey;
+    }
+    #scoreBoard {
+      font-size: 24px;
+      margin-bottom: 20px;
+     
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+    }
+    .hole {
+      width: 100px;
+      height: 100px;
+      background-color: #fdf5b0;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .mole {
+      font-size: 40px;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+    #startBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-weight: bolder;
+      cursor: pointer;
+      background-color: rgb(252, 221, 108);
+      border-radius: 50px;
+    }
+    #timer {
+      font-size: 24px;
+      margin-bottom: 20px;
+      margin-right: 90px;
+    }
+    .scores {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: rgb(254, 255, 255); font-family: 'Times New Roman', Times, serif; text-align: center;">WHACK-A-MOLE</h1>
+
+<div class="scores"><div id="timer">Timer: 30</div>
+<div id="scoreBoard">Score: 0 | High Score: 0</div></div>
+  <div class="grid">
+    <div class="hole" id="hole1"></div>
+    <div class="hole" id="hole2"></div>
+    <div class="hole" id="hole3"></div>
+    <div class="hole" id="hole4"></div>
+    <div class="hole" id="hole5"></div>
+    <div class="hole" id="hole6"></div>
+    <div class="hole" id="hole7"></div>
+    <div class="hole" id="hole8"></div>
+    <div class="hole" id="hole9"></div>
+  </div>
+<button id="startBtn">PLAY NOW</button>
+  <script src="mole.js"></script>
+</body>
+</html>
